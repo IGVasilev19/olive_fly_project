@@ -4,6 +4,8 @@ import argparse
 import pathlib
 import cv2
 
+from olive_fly_detector import detect_olive_fly
+
 parser = argparse.ArgumentParser(
     prog="OliveFly detection test script",
     description="""
@@ -15,14 +17,9 @@ parser.add_argument('directory', help='location of the dataset',
 parser.add_argument('--verbose', '-v', action="store_true")
 
 
-def detect_olive_fly(image) :
-    # TODO: implement something here 
-    return False
-
 def main():
     args = parser.parse_args()
-    
-    # confusion matrix
+
     TP = 0
     TN = 0
     FP = 0
